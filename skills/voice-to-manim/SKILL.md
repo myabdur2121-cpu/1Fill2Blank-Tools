@@ -29,6 +29,9 @@ so that any future AI/human can redo or revise it from the manifests alone.
 ### 0. Bootstrap & verify environment
 Set up ManimCE + slim LaTeX via `manim-sandbox-setup`. Verify `manim`, `ffmpeg/ffprobe`,
 LaTeX engine, `dvisvgm` versions and record them in the production notes.
+For exactly what to download or regenerate after a reset/cleanup (setup
+scripts, ASR venv + model, source assets, stems/renders), follow the
+checklist in `docs/bn/09-downloads-and-rebuild.md`.
 Render the setup repo's smoke example if anything looks off. Fix setup here, not in the project.
 
 ### 1. Inventory the audio — trust nothing

@@ -24,7 +24,8 @@ understand the base scene with this skill first.
 2. The target project folder/repo and the owner's task in 2–3 lines.
 3. Project memory, if present: `README.md`, `PROGRESS.md`, `DECISIONS.md`,
    `CODE_ANATOMY.md`, config/manifests.
-4. `manim-sandbox-setup` repo if anything must be rendered.
+4. `manim-sandbox-setup` repo if anything must be rendered (what to download
+   or regenerate after a reset/cleanup: `docs/bn/09-downloads-and-rebuild.md`).
 
 ## Outputs
 
