@@ -13,6 +13,9 @@
 | `make_music.py` | ✅ existing | ঠিক নির্দিষ্ট দৈর্ঘ্যের background music তৈরি |
 | `mix_voice_music.py` | ✅ existing | mark ধরে voice বসানো, sidechain ducking, loudnorm, final MP4 |
 | `qc_video.py` | ✅ implemented (Step 3) | spec, full decode, LUFS/true-peak, long-silence, contact sheet, speech-gap audit; JSON report |
+| `analyze_manim_project.py` | ✅ implemented (ecosystem Sector 3, local draft) | Manim project পড়ে CODE_ANATOMY খসড়া: ফাইল/scene তালিকা, Pattern A/B/C শনাক্ত, builder-state ও segment মানচিত্র, ভাঙা/generated ফাইল। শুধু পড়ে—কোড চালায় না। |
+| `cache_report.py` | ✅ implemented (ecosystem Sector 3, local draft) | cache/media/temp-এর dry-run হিসাব: strong candidate / review / archive-like আলাদা করে মাপে। **কখনো কিছু মোছে না।** |
+| `project_index.py` | ✅ implemented (ecosystem Sector 3, local draft) | project ফোল্ডারগুলোর এক-লাইনের INDEX খসড়া: status ও সারাংশ notes/README থেকে, main ফাইল অনুমানে। |
 
 ## মূল কমান্ডগুলো (own-voice workflow)
 
@@ -40,3 +43,19 @@ python tools/qc_video.py final.mp4 --config project_config.json \
 ```
 
 Music ও mixing-এর কমান্ড আগের মতোই (`make_music.py`, `mix_voice_music.py`); বিস্তারিত এই repo-র root README ও `docs/bn/`-এ আছে।
+
+## Ecosystem কমান্ড (নতুন project বোঝা ও সাজানো)
+
+```bash
+# কোনো Manim project-এর কোড-মানচিত্রের খসড়া (read-only)
+python tools/analyze_manim_project.py <project-folder> > CODE_ANATOMY.draft.md
+
+# Cache-এ কী আছে তার হিসাব — dry-run, কিছু মোছা হয় না
+python tools/cache_report.py <workspace-folder> > cache_report.md
+
+# Project ফোল্ডারগুলোর INDEX খসড়া (mywork ধাঁচে)
+python tools/project_index.py <projects-folder> > INDEX.draft.md
+```
+
+প্যাটার্ন ও ওয়ার্কফ্লোর ব্যাখ্যা: `docs/bn/06-ecosystem-map.md`,
+`07-code-anatomy.md`, `08-main-plus-lab-workflow.md`।

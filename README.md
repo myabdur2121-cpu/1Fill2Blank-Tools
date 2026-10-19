@@ -15,8 +15,10 @@ Reusable tools and AI skills for 1Fill2Blank math videos (ManimCE).
 | অংশ | জায়গা | ভূমিকা |
 |---|---|---|
 | Skill (মস্তিষ্ক) | `skills/voice-to-manim/` | নিজের রেকর্ড করা split voice থেকে sync করা Manim ভিডিও বানানোর পুরো workflow, সিদ্ধান্তের নিয়ম, QC checklist, তৈরি prompt |
-| Tools (হাত) | `tools/` | Config-চালিত Python script: audio inventory, ASR, voice-unit preparation, pad হিসাব, music তৈরি, mixing, QC |
-| Templates | `templates/` | নতুন project-এর জন্য JSON schema + example config |
+| Skill (মস্তিষ্ক) | `skills/manim-ecosystem/` | যেকোনো Manim project বোঝা ও মালিকের Main + Lab ধরনে নিরাপদে বাড়ানো: কোডের ৩ প্যাটার্ন, lab→main promote, cache সুরক্ষা, handoff |
+| Tools (হাত) | `tools/` | Config-চালিত Python script: audio inventory, ASR, voice-unit preparation, pad হিসাব, music তৈরি, mixing, QC; আর ecosystem টুলস (project analyzer, cache dry-run, project index) |
+| Templates | `templates/` | নতুন project-এর জন্য JSON schema + example config, আর PROGRESS/DECISIONS/CODE_ANATOMY ছক |
+| রক্ষণাবেক্ষণ | `UPDATE_GUIDE.md` | ভবিষ্যতে এই সিস্টেম কীভাবে আপডেট করতে হয় (স্তর বাছাই, টেস্ট, version, প্রকাশ) |
 | Setup | আলাদা repo: `manim-sandbox-setup` | ManimCE + slim LaTeX + FFmpeg + fonts সেটআপ। এখানে duplicate করা হয়নি। |
 
 ## যেসব জিনিস এই repo-তে থাকবে না
