@@ -11,4 +11,4 @@
   `compute_pads.py`-তে handle-aware `--voice-units` mode যোগ।
   Factorial ডেটা দিয়ে pad হিসাব আগের ফলাফলের সঙ্গে হুবহু মিলেছে; final MP4-তে QC PASS।
   (বিস্তারিত workspace draft-এর `STEP3_REPORT.md`-তে।)
-- এখনো GitHub-এ push হয়নি — local draft
+- GitHub-এ প্রকাশিত: `myabdur2121-cpu/1Fill2Blank-Tools` (2026-10-19, PR #1 merged)
