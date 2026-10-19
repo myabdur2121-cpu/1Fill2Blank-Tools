@@ -1,0 +1,57 @@
+{
+  "purpose": "Example editorial decisions for prepare_voice_units.py — copy and edit per project",
+  "source_root": "path/to/voice/folder",
+  "defaults": {
+    "sample_rate_hz": 48000,
+    "lead_handle_s": 0.08,
+    "tail_handle_s": 0.1,
+    "cleanup": "standard"
+  },
+  "excluded_alternate_takes": [
+    {"file": "clip_09.wav", "reason": "Complete alternate take of M10+M11; later split takes used instead"}
+  ],
+  "units": [
+    {
+      "id": "M01",
+      "source": "adobe_enhance_voice/clip_01-enhanced.wav",
+      "text_bn_corrected": "প্রথম লাইন…",
+      "visual": "Opening visual",
+      "gap_after_speech_s": 0.45
+    },
+    {
+      "id": "M02",
+      "source": "adobe_enhance_voice/clip_02-enhanced.wav",
+      "text_bn_corrected": "এটা কি প্রশ্ন?",
+      "visual": "Question visual",
+      "gap_after_speech_s": 0.95
+    },
+    {
+      "id": "M03",
+      "source": "adobe_enhance_voice/clip_04-enhanced.wav",
+      "trim_end_s": 13.98,
+      "text_bn_corrected": "লম্বা রেকর্ডিংয়ের প্রথম অংশ…",
+      "visual": "Split example, first half",
+      "gap_after_speech_s": null
+    },
+    {
+      "id": "M04",
+      "source": "adobe_enhance_voice/clip_04-enhanced.wav",
+      "trim_start_s": 14.63,
+      "text_bn_corrected": "দ্বিতীয় অংশ…",
+      "visual": "Split example, second half",
+      "gap_after_speech_s": 0.35
+    },
+    {
+      "id": "M05",
+      "source": "My recording 10.m4a",
+      "cleanup": "raw_phone",
+      "trim_start_s": 0.71,
+      "trim_end_s": 7.38,
+      "speech_start_s": 0.79,
+      "speech_end_s": 7.28,
+      "text_bn_corrected": "শুধু raw take-ই ছিল এমন লাইন…",
+      "visual": "Raw-only take example",
+      "gap_after_speech_s": 0.35
+    }
+  ]
+}

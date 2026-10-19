@@ -1,0 +1,14 @@
+# Core: the music generator, prepare_voice_units.py and transcribe_clips.py
+# use numpy. inventory_audio.py, compute_pads.py, mix_voice_music.py,
+# qc_video.py and manim_sync.py use the standard library (+ ffmpeg/ffprobe).
+numpy>=1.26
+
+# Optional, only for tools/transcribe_clips.py (install in the ASR
+# environment, not necessarily beside Manim). In low-RAM sandboxes use the
+# faster-whisper "small" model on CPU int8.
+# faster-whisper>=1.0
+
+# External command-line tools are installed separately:
+# - FFmpeg + ffprobe (mixing/measurement)
+# - Manim Community + LaTeX + fonts (rendering; use the owner's
+#   manim-sandbox-setup project rather than copying its installers here)

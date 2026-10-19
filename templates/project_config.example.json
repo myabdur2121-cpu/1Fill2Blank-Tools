@@ -1,0 +1,48 @@
+{
+  "project": {
+    "id": "my-new-video",
+    "title": "My new video",
+    "variant": "my_voice",
+    "language": "bn"
+  },
+  "skill": {
+    "name": "voice-to-manim",
+    "version": "0.1.0-draft",
+    "tools_repo": "1Fill2Blank-Tools"
+  },
+  "sources": {
+    "script": "script.md",
+    "base_scene": "scene.py",
+    "voice_folder": "<link-or-path-to-voice-clips>",
+    "enhanced_subfolder": "adobe_enhance_voice"
+  },
+  "audio": {
+    "audio_pattern": "{segment}.wav",
+    "order": ["M01", "M02", "OUTRO", "END"],
+    "voice_segments": ["M01", "M02"],
+    "sample_rate_hz": 48000
+  },
+  "gap_policy_s": {
+    "question": [0.9, 1.1],
+    "sentence": [0.3, 0.45],
+    "lead_in": [0.18, 0.25]
+  },
+  "music": {
+    "preset": "background",
+    "bpm": 72,
+    "seed": 7,
+    "music_below_voice_db": 11.0,
+    "ducking": {"threshold": 0.02, "ratio": 6, "attack_ms": 150, "release_ms": 850}
+  },
+  "output": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "final_file": "MyNewVideo_FINAL.mp4",
+    "release_tag": "my-new-video-v1"
+  },
+  "qc_targets": {
+    "loudness_lufs_range": [-16, -14],
+    "true_peak_max_dbtp": -1.0
+  }
+}

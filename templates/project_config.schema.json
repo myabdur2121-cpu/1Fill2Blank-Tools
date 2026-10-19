@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "1fill2blank/project_config.schema.json",
+  "title": "1Fill2Blank project_config",
+  "type": "object",
+  "required": ["project", "skill", "output"],
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": ["id", "title"],
+      "properties": {
+        "id": {"type": "string"},
+        "title": {"type": "string"},
+        "variant": {"type": "string"},
+        "language": {"type": "string", "examples": ["bn"]}
+      },
+      "additionalProperties": true
+    },
+    "skill": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"type": "string", "examples": ["voice-to-manim"]},
+        "version": {"type": "string"},
+        "tools_repo": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "object",
+      "properties": {
+        "script": {"type": "string"},
+        "base_scene": {"type": "string"},
+        "voice_folder": {"type": "string"},
+        "enhanced_subfolder": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "audio": {
+      "type": "object",
+      "properties": {
+        "audio_pattern": {"type": "string", "examples": ["{segment}.wav"]},
+        "order": {"type": "array", "items": {"type": "string"}},
+        "voice_segments": {"type": "array", "items": {"type": "string"}},
+        "sample_rate_hz": {"type": "integer"}
+      },
+      "additionalProperties": true
+    },
+    "gap_policy_s": {
+      "type": "object",
+      "description": "Speech-to-speech gaps. Ranges are [min, max] seconds; exact per-unit values live in voice_units.json.",
+      "additionalProperties": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2}
+    },
+    "music": {
+      "type": "object",
+      "properties": {
+        "preset": {"type": "string"},
+        "bpm": {"type": "number"},
+        "seed": {"type": "integer"},
+        "music_below_voice_db": {"type": "number"},
+        "ducking": {"type": "object", "additionalProperties": true}
+      },
+      "additionalProperties": true
+    },
+    "output": {
+      "type": "object",
+      "required": ["width", "height", "fps"],
+      "properties": {
+        "width": {"type": "integer"},
+        "height": {"type": "integer"},
+        "fps": {"type": "integer"},
+        "final_file": {"type": "string"},
+        "release_tag": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "qc_targets": {
+      "type": "object",
+      "properties": {
+        "loudness_lufs_range": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+        "true_peak_max_dbtp": {"type": "number"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
