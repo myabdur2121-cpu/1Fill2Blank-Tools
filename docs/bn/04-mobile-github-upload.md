@@ -1,5 +1,13 @@
 # মোবাইল থেকে GitHub-এ তোলা (PC ছাড়া, token share না করে)
 
+> **⚠️ Deprecated (legacy) — এই নথি আর অনুসরণ করবে না।**
+> এটি প্রাথমিক ZIP/Termux আপলোড পর্বের লেখা। এখানে উল্লেখিত
+> `mobile/termux_push.sh` বর্তমান repo-তে নেই এবং `tools/audio-video`
+> পথটাও এখনকার repo-বিভাজনের সঙ্গে মেলে না। বর্তমান পথ হলো:
+> repo-র root-এর `START_HERE.md` ও `HANDOFF_PROMPT.md` দিয়ে শুরু করে
+> `UPDATE_GUIDE.md` অনুযায়ী branch → PR → merge। ডকগুলোর status সূচি:
+> এই ফোল্ডারের `README.md`। নিচের লেখা শুধু ইতিহাস হিসেবে রাখা হলো।
+
 ## আগে মূল কথাটা
 
 এই package ব্যবহারের জন্য **কারও হাতে token দিতে হয় না**। তোমার সামনে

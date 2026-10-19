@@ -18,7 +18,8 @@
 3. কাজ অনুযায়ী Skill:
    - Project বোঝা/সাজানো/animation যোগ করা → [`skills/manim-ecosystem/SKILL.md`](skills/manim-ecosystem/SKILL.md)
    - নিজের রেকর্ড করা কণ্ঠ দিয়ে sync ভিডিও → [`skills/voice-to-manim/SKILL.md`](skills/voice-to-manim/SKILL.md)
-4. পটভূমির মানচিত্র (বাংলা): [`docs/bn/06-ecosystem-map.md`](docs/bn/06-ecosystem-map.md),
+4. পটভূমির মানচিত্র (বাংলা; সব ডকের status সূচি: [`docs/bn/README.md`](docs/bn/README.md)):
+   [`06-ecosystem-map.md`](docs/bn/06-ecosystem-map.md),
    [`07-code-anatomy.md`](docs/bn/07-code-anatomy.md),
    [`08-main-plus-lab-workflow.md`](docs/bn/08-main-plus-lab-workflow.md);
    নতুন পরিবেশে যা নামাতে/বানাতে হবে → [`09-downloads-and-rebuild.md`](docs/bn/09-downloads-and-rebuild.md)
