@@ -20,7 +20,8 @@
    - নিজের রেকর্ড করা কণ্ঠ দিয়ে sync ভিডিও → [`skills/voice-to-manim/SKILL.md`](skills/voice-to-manim/SKILL.md)
 4. পটভূমির মানচিত্র (বাংলা): [`docs/bn/06-ecosystem-map.md`](docs/bn/06-ecosystem-map.md),
    [`07-code-anatomy.md`](docs/bn/07-code-anatomy.md),
-   [`08-main-plus-lab-workflow.md`](docs/bn/08-main-plus-lab-workflow.md)
+   [`08-main-plus-lab-workflow.md`](docs/bn/08-main-plus-lab-workflow.md);
+   নতুন পরিবেশে যা নামাতে/বানাতে হবে → [`09-downloads-and-rebuild.md`](docs/bn/09-downloads-and-rebuild.md)
 5. [`UPDATE_GUIDE.md`](UPDATE_GUIDE.md) — সিস্টেম বদলাতে হলে
 6. Projects repo `1Fill2Blank`-এ সংশ্লিষ্ট project-এর
    `README` / `PROGRESS` / `CODE_ANATOMY` / config

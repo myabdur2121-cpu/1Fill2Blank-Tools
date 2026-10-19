@@ -12,3 +12,4 @@ numpy>=1.26
 # - FFmpeg + ffprobe (mixing/measurement)
 # - Manim Community + LaTeX + fonts (rendering; use the owner's
 #   manim-sandbox-setup project rather than copying its installers here)
+# Full download/rebuild checklist: docs/bn/09-downloads-and-rebuild.md

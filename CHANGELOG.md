@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.2.1 — 2026-10-19
+
+- ডাউনলোড ও পুনর্গঠনের canonical চেকলিস্ট যোগ: `docs/bn/09-downloads-and-rebuild.md`
+  (setup repo থেকে ManimCE+slim LaTeX, fonts, FFmpeg, core/ASR প্যাকেজ ও
+  small মডেল, সোর্সের অবস্থান, এবং stems/render জাতীয় আবার-বানানোর জিনিস)।
+  START_HERE, দুই Skill, tools README ও requirements থেকে লিংক দেওয়া হয়েছে।
+
 ## 0.2.0 — 2026-10-19
 
 - Ecosystem সংগঠন (Sectors 2–4): আগের AI-এর workspace ও মালিকের Main + Lab

@@ -58,4 +58,5 @@ python tools/project_index.py <projects-folder> > INDEX.draft.md
 ```
 
 প্যাটার্ন ও ওয়ার্কফ্লোর ব্যাখ্যা: `docs/bn/06-ecosystem-map.md`,
-`07-code-anatomy.md`, `08-main-plus-lab-workflow.md`।
+`07-code-anatomy.md`, `08-main-plus-lab-workflow.md`; নতুন পরিবেশে
+ডাউনলোড/পুনর্গঠনের তালিকা: `09-downloads-and-rebuild.md`।
