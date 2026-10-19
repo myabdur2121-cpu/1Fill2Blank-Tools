@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 0.2.0 — 2026-10-19
+
+- Ecosystem সংগঠন (Sectors 2–4): আগের AI-এর workspace ও মালিকের Main + Lab
+  কাজের ধরন বিশ্লেষণ করে সিস্টেমে রূপ দেওয়া হয়েছে—
+  - মানচিত্র ও গাইড: `docs/bn/06-ecosystem-map.md`, `07-code-anatomy.md`
+    (Pattern A/B/C), `08-main-plus-lab-workflow.md`
+  - Templates: `progress`, `decisions`, `user_instructions`, `code_anatomy`
+  - Tools: `analyze_manim_project.py`, `cache_report.py` (dry-run),
+    `project_index.py` — পুরনো snapshot দিয়ে টেস্ট করা (প্যাটার্ন শনাক্ত ও
+    ভাঙা-ফাইল রিপোর্ট মিলেছে)
+  - নতুন Skill: `skills/manim-ecosystem/` (SKILL + CHECKLIST + PROMPTS)
+  - প্রবেশপথ ও রক্ষণাবেক্ষণ: `START_HERE.md`, `HANDOFF_PROMPT.md`,
+    `UPDATE_GUIDE.md`; `AGENTS.md` ও README-র পড়ার ক্রম হালনাগাদ
+
 ## 0.1.0-draft — 2026-10-19
 
 - `voice-to-manim` skill-এর প্রথম খসড়া: `SKILL.md`, `DECISION_RULES.md`, `QC_CHECKLIST.md`, `PROMPTS.md`

@@ -21,6 +21,10 @@ Follow this file before doing anything else.
 ## Hard rules
 
 - **No delete/move/overwrite** of existing user files without explicit approval.
+- **Sector gates:** split work into sectors; at the end of each sector report
+  and stop. Start the next sector only after the owner replies/approves.
+- **Cache ≠ disposable by name.** Storage work is dry-run only
+  (`tools/cache_report.py`); archives have lived under `cache/` before.
 - **No secrets in files or Git.** Never write a token into any file, remote URL, doc, or commit.
   Push only when the owner authorizes that specific push, and tell the owner to revoke the token right after.
 - **Do not commit** virtualenvs, model caches, generated WAV/MP4, Manim `media/`, or duplicate renders.
