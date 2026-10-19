@@ -1,0 +1,43 @@
+{
+  "project": "নতুন ভিডিওর নাম এখানে",
+  "order": [
+    "S01",
+    "S02",
+    "LOGO_MID",
+    "S03",
+    "OUTRO",
+    "END"
+  ],
+  "voice_segments": [
+    "S01",
+    "S02",
+    "S03"
+  ],
+  "audio_pattern": "{segment}.mp3",
+  "gap_seconds": 0.45,
+  "music_below_voice_db": 11.0,
+  "music": {
+    "preset": "background",
+    "bpm": 72,
+    "seed": 7,
+    "target_peak": 0.62,
+    "sections": [
+      {
+        "name": "intro",
+        "music_level": "সামনে",
+        "note": "Logo/title চলার সময়"
+      },
+      {
+        "name": "main explanation",
+        "music_level": "হালকা",
+        "note": "Voice-এর নিচে duck হয়ে থাকবে"
+      },
+      {
+        "name": "recap and outro",
+        "music_level": "আবার সামনে",
+        "note": "শেষের দিকে fade out"
+      }
+    ]
+  },
+  "notes": "order-এর প্রতিটি নাম Manim scene-এ self.mark('...') দিয়ে একবার করে আসতে হবে। voice_segments-এ শুধু যেগুলোতে কথা আছে সেগুলো রাখবে।"
+}

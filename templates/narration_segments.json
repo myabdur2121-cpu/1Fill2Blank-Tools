@@ -1,0 +1,30 @@
+{
+  "language": "bn",
+  "project": "নতুন ভিডিওর নাম",
+  "instructions_bn": [
+    "প্রতিটি segment একটি scene mark-এর সঙ্গে মিলবে।",
+    "Formula চোখে পড়ার ভাষা থেকে মুখে বলার ভাষায় বদলে লিখবে, যেমন: n! -> এন Factorial।",
+    "যে অংশে কথা নেই (যেমন logo) সেটা voice_segments থেকে বাদ থাকবে, কিন্তু scene order-এ থাকবে।",
+    "একটি segment খুব লম্বা হলে ভেতরের animation stage অনুযায়ী ভাগ করার কথা ভাববে।"
+  ],
+  "segments": [
+    {
+      "id": "S01",
+      "title": "প্রথম দৃশ্যের বর্ণনা",
+      "script_window": "00:00-00:00",
+      "text": "এখানে প্রথম অংশের spoken narration লিখবে।"
+    },
+    {
+      "id": "S02",
+      "title": "দ্বিতীয় দৃশ্যের বর্ণনা",
+      "script_window": "00:00-00:00",
+      "text": "এখানে দ্বিতীয় অংশের spoken narration লিখবে।"
+    },
+    {
+      "id": "S03",
+      "title": "শেষ দৃশ্যের বর্ণনা",
+      "script_window": "00:00-00:00",
+      "text": "এখানে শেষ অংশের spoken narration লিখবে।"
+    }
+  ]
+}

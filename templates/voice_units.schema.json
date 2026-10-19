@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "1fill2blank/voice_units.schema.json",
+  "title": "1Fill2Blank voice_units manifest",
+  "type": "object",
+  "required": ["units"],
+  "properties": {
+    "purpose": {"type": "string"},
+    "total_clean_duration_s": {"type": "number"},
+    "excluded_alternate_takes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["file", "reason"],
+        "properties": {
+          "file": {"type": "string"},
+          "reason": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "units": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "source_name", "text_bn_corrected", "visual", "file"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^M[0-9]{2,3}$"},
+          "source": {"type": "string"},
+          "source_name": {"type": "string"},
+          "trim_start_s": {"type": ["number", "null"]},
+          "trim_end_s": {"type": ["number", "null"]},
+          "speech_start_s": {"type": ["number", "null"]},
+          "speech_end_s": {"type": ["number", "null"]},
+          "duration_s": {"type": "number"},
+          "lead_handle_s": {"type": "number"},
+          "tail_handle_s": {"type": "number"},
+          "gap_after_speech_s": {"type": ["number", "null"]},
+          "text_bn_corrected": {"type": "string"},
+          "visual": {"type": "string"},
+          "file": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

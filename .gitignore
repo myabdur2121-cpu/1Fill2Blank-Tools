@@ -1,0 +1,27 @@
+# Python / venv / caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*_env/
+.cache/
+.pytest_cache/
+
+# ASR / model downloads
+*_models/
+models--*/
+*.onnx
+
+# Generated media (recipes ও manifests রাখো, media নয়)
+media/
+*.wav
+*.mp4
+*.mp3
+*.m4a
+!templates/*.json
+
+# Local machine / secrets
+.env
+*token*
+*.local
+.DS_Store
