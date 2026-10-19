@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 0.2.2 — 2026-10-19
+
+- Ecosystem audit-এর পরের পরিচ্ছন্নতা: `docs/bn/README.md` ডক-সূচি (canonical/
+  background/legacy) যোগ; অচল `04-mobile-github-upload.md`-তে deprecated ব্যানার;
+  tools তালিকার stale status (“local draft”/প্রসেস-লেবেল) পরিষ্কার করে stable;
+  `project_config.example.json`-এর skill version বর্তমান `0.2.2`-এ হালনাগাদ।
+- Committed smoke tests যোগ: `tests/test_ecosystem_tools.py` — synthetic fixture
+  দিয়ে Pattern A/B/C শনাক্ত, ভাঙা-ফাইল রিপোর্ট, cache শ্রেণিবিভাগ, project
+  index, সব টুলের syntax, template JSON ও entry লিংক যাচাই
+  (`python3 -m unittest discover -s tests -v`)।
+
 ## 0.2.1 — 2026-10-19
 
 - ডাউনলোড ও পুনর্গঠনের canonical চেকলিস্ট যোগ: `docs/bn/09-downloads-and-rebuild.md`

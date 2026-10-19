@@ -1,21 +1,23 @@
 # Tools — status map
 
 এই ফোল্ডারের সব script config-চালিত; project-নির্দিষ্ট path/নাম code-এ hardcode থাকে না।
-নিয়ম: কোনো tool পাল্টালে `CHANGELOG.md`-তে এন্ট্রি দিতে হবে এবং অন্তত একটা dry-run/উদাহরণ টেস্ট চালাতে হবে।
+নিয়ম: কোনো tool পাল্টালে `CHANGELOG.md`-তে এন্ট্রি দিতে হবে, অন্তত একটা
+dry-run/উদাহরণ টেস্ট চালাতে হবে, এবং repo root থেকে smoke suite চালাতে হবে:
+`python3 -m unittest discover -s tests -v` (শুধু stdlib; কোনো ডাউনলোড/render নয়)।
 
 | Tool | Status | কাজ |
 |---|---|---|
-| `inventory_audio.py` | ✅ implemented (Step 3) | সব clip-এর ffprobe inventory JSON: duration, sample-rate, channels, codec |
-| `transcribe_clips.py` | ✅ generic (Step 3) | clip-by-clip ASR (faster-whisper; FFmpeg দিয়ে 16 kHz mono decode)। `--dry-run` টেস্ট হয়েছে; পুরো ASR চালাতে ASR environment লাগে। |
-| `prepare_voice_units.py` | ✅ implemented (Step 3) | decisions JSON থেকে cleaned `Mxx.wav` + portable `voice_units.json`; sustained-speech trim, ছোট handle, standard/raw_phone cleanup |
-| `manim_sync.py` | ✅ existing | Manim scene-এ `mark()`/`pad()` helper |
-| `compute_pads.py` | ✅ existing + handle-aware mode (Step 3) | পুরোনো duration mode অপরিবর্তিত; `--voice-units` দিলে speech-to-speech gap অনুযায়ী pad + report |
-| `make_music.py` | ✅ existing | ঠিক নির্দিষ্ট দৈর্ঘ্যের background music তৈরি |
-| `mix_voice_music.py` | ✅ existing | mark ধরে voice বসানো, sidechain ducking, loudnorm, final MP4 |
-| `qc_video.py` | ✅ implemented (Step 3) | spec, full decode, LUFS/true-peak, long-silence, contact sheet, speech-gap audit; JSON report |
-| `analyze_manim_project.py` | ✅ implemented (ecosystem Sector 3, local draft) | Manim project পড়ে CODE_ANATOMY খসড়া: ফাইল/scene তালিকা, Pattern A/B/C শনাক্ত, builder-state ও segment মানচিত্র, ভাঙা/generated ফাইল। শুধু পড়ে—কোড চালায় না। |
-| `cache_report.py` | ✅ implemented (ecosystem Sector 3, local draft) | cache/media/temp-এর dry-run হিসাব: strong candidate / review / archive-like আলাদা করে মাপে। **কখনো কিছু মোছে না।** |
-| `project_index.py` | ✅ implemented (ecosystem Sector 3, local draft) | project ফোল্ডারগুলোর এক-লাইনের INDEX খসড়া: status ও সারাংশ notes/README থেকে, main ফাইল অনুমানে। |
+| `inventory_audio.py` | ✅ stable | সব clip-এর ffprobe inventory JSON: duration, sample-rate, channels, codec |
+| `transcribe_clips.py` | ✅ stable | clip-by-clip ASR (faster-whisper; FFmpeg দিয়ে 16 kHz mono decode)। `--dry-run` টেস্ট হয়েছে; পুরো ASR চালাতে ASR environment লাগে। |
+| `prepare_voice_units.py` | ✅ stable | decisions JSON থেকে cleaned `Mxx.wav` + portable `voice_units.json`; sustained-speech trim, ছোট handle, standard/raw_phone cleanup |
+| `manim_sync.py` | ✅ stable (helper) | Manim scene-এ `mark()`/`pad()` helper |
+| `compute_pads.py` | ✅ stable | duration mode ও handle-aware mode (`--voice-units` দিলে speech-to-speech gap অনুযায়ী pad + report) |
+| `make_music.py` | ✅ stable | ঠিক নির্দিষ্ট দৈর্ঘ্যের background music তৈরি |
+| `mix_voice_music.py` | ✅ stable | mark ধরে voice বসানো, sidechain ducking, loudnorm, final MP4 |
+| `qc_video.py` | ✅ stable | spec, full decode, LUFS/true-peak, long-silence, contact sheet, speech-gap audit; JSON report |
+| `analyze_manim_project.py` | ✅ stable (v0.2.0 থেকে) | Manim project পড়ে CODE_ANATOMY খসড়া: ফাইল/scene তালিকা, Pattern A/B/C শনাক্ত, builder-state ও segment মানচিত্র, ভাঙা/generated ফাইল। শুধু পড়ে—কোড চালায় না। |
+| `cache_report.py` | ✅ stable (v0.2.0 থেকে) | cache/media/temp-এর dry-run হিসাব: strong candidate / review / archive-like আলাদা করে মাপে। **কখনো কিছু মোছে না।** |
+| `project_index.py` | ✅ stable (v0.2.0 থেকে) | project ফোল্ডারগুলোর এক-লাইনের INDEX খসড়া: status ও সারাংশ notes/README থেকে, main ফাইল অনুমানে। |
 
 ## মূল কমান্ডগুলো (own-voice workflow)
 
@@ -60,3 +62,14 @@ python tools/project_index.py <projects-folder> > INDEX.draft.md
 প্যাটার্ন ও ওয়ার্কফ্লোর ব্যাখ্যা: `docs/bn/06-ecosystem-map.md`,
 `07-code-anatomy.md`, `08-main-plus-lab-workflow.md`; নতুন পরিবেশে
 ডাউনলোড/পুনর্গঠনের তালিকা: `09-downloads-and-rebuild.md`।
+
+## Smoke tests
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+ছোট synthetic fixture দিয়ে ecosystem টুলসগুলোর মূল আচরণ যাচাই হয়
+(Pattern A/B/C, cache শ্রেণিবিভাগ, project index) — কোনো ডাউনলোড,
+render বা ASR মডেল ছাড়াই। টুল বদলালে এই suite পাস করা বাধ্যতামূলক;
+আচরণ বদলালে fixture-ও একই পরিবর্তনে হালনাগাদ করো।

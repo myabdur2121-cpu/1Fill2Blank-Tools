@@ -7,7 +7,7 @@
   },
   "skill": {
     "name": "voice-to-manim",
-    "version": "0.1.0-draft",
+    "version": "0.2.2",
     "tools_repo": "1Fill2Blank-Tools"
   },
   "sources": {
